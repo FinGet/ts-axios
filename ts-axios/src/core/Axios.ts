@@ -29,8 +29,8 @@ export default class Axios {
     return this._requestMethodWithData('put', url, data, config)
   }
 
-  patch(url: string, data?:any, config?:AxiosRequestConfig): AxiosPromise {
-    return this._requestMethodWithData('patch', url, data, config)
+  dispatch(url: string, data?:any, config?:AxiosRequestConfig): AxiosPromise {
+    return this._requestMethodWithData('post', url, data, config)
   }
 
   _requestMethodWithoutData(method: Method, url:string, config?:AxiosRequestConfig) {

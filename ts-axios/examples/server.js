@@ -60,6 +60,16 @@ router.get('/error/timeout', function(req, res) {
     })
   }, 3000)
 })
+router.get('/extend/user', function(req, res) {
+  res.json({
+    code: 0,
+    message: 'ok',
+    result: {
+      name: 'jack',
+      age: 18
+    }
+  })
+})
 app.use(webpackHotMiddleware(compiler))
 
 app.use(express.static(__dirname))
